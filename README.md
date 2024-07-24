@@ -20,3 +20,22 @@ This stage focused on data loading and preparation.  As mentioned, data is being
 - Web-hosted CSV files (Products table)
 - ZIP file containing multiple CSV files (Customers table, created from a combination of three CSV files)
 
+In addition to importing the data a number of transformations were required:
+
+### Orders
+- The [Card Number] column was deleted to ensure data privacy compliance.
+- [Order Date] and [Shipping Date] columns were split to create separate Date and Time columns.
+- Rows with missing and null values were removed from the [Order Date] column
+- Columns were renamed (where appropriate) based on standard naming conventions
+
+### Products
+- Duplicates were removed from the [product_code] column
+- Columns were renamed (where appropriate) based on standard naming conventions
+
+### Stores
+- Columns were renamed (where appropriate) based on standard naming conventions
+
+### Customers
+- [Full Name] column was created based on combination of [First Name] and [Last Name] columns
+- Column referencing the original source file was deleted
+- Columns were renamed (where appropriate) based on standard naming conventions
