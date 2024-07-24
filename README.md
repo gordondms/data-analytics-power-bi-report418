@@ -39,3 +39,18 @@ In addition to importing the data a number of transformations were required:
 - [Full Name] column was created based on combination of [First Name] and [Last Name] columns
 - Column referencing the original source file was deleted
 - Columns were renamed (where appropriate) based on standard naming conventions
+
+## Milestone 3: Creating the Data Model
+
+### Task 1: Creating a date table covering the entire period of time in the dataset
+
+DAX formulae were then used to add the following columns: 
+- Day of Week
+- Month Number (i.e. Jan = 1, Dec = 12 etc.)
+- Month Name
+- Quarter
+- Year
+- Start of Year
+- Start of Quarter
+- Start of Month
+- Start of Week
