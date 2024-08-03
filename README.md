@@ -66,3 +66,4 @@ Added relationships:
 
 The relationship between Orders[Order Date] and Date[date] is the active relationship. All  relationships are one-to-many, with a single filter direction flowing from the dimension table side to the fact table side.
 
+![image](https://github.com/user-attachments/assets/b9537672-e5f7-4656-b52a-30693cb2b5cd)
