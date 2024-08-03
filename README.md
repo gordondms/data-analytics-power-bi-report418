@@ -58,11 +58,11 @@ DAX formulae were then used to add the following columns:
 ### Task 2: Built a star schema data model
 
 Added relationships:
-Products[product_code] to Orders[product_code]
-Stores[store code] to Orders[Store Code]
-Customers[User UUID] to Orders[User ID]
-Date[date] to Orders[Order Date]
-Date[date] to Orders[Shipping Date]
+- Products[product_code] to Orders[product_code]
+- Stores[store code] to Orders[Store Code]
+- Customers[User UUID] to Orders[User ID]
+- Date[date] to Orders[Order Date]
+- Date[date] to Orders[Shipping Date]
 
 The relationship between Orders[Order Date] and Date[date] is the active relationship. All  relationships are one-to-many, with a single filter direction flowing from the dimension table side to the fact table side.
 
