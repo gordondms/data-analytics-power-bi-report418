@@ -67,3 +67,26 @@ Added relationships:
 The relationship between Orders[Order Date] and Date[date] is the active relationship. All  relationships are one-to-many, with a single filter direction flowing from the dimension table side to the fact table side.
 
 ![image](https://github.com/user-attachments/assets/b9537672-e5f7-4656-b52a-30693cb2b5cd)
+
+### Tasks 3 & 4: Created a Measures Table
+
+This includes the following measures and DAX formulae:
+
+- Total Orders        Total Orders = COUNT(Orders[User ID])
+- Total Revenue       Total Revenue = SUM(Orders[Total Revenue])    combined with calculated column => Total Revenue = Orders[Product Quantity] * RELATED(Products[Sale Price])
+- Total Profit        Total Profit = SUMX(Orders, Orders[Product Quantity] * (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])))
+- Total Customers     Total Customers = DISTINCTCOUNT(Orders[User ID])
+- Total Quantity      Total Quantity = COUNT(Orders[Product Quantity])
+- Profit YTD          Profit YTD = TOTALYTD('Measures Table'[Total Profit], Orders[Order Date])
+- Revenue YTD         Revenue YTD = TOTALYTD(SUM(Orders[Total Revenue]), Orders[Order Date])
+
+### Task 5: Created Date and Geography Hierarchies
+
+- Created a Date Hierarchy with: Start of Year, Start of Quarter, Start of Month, Start of Week, Date
+- Created a calculated column in Stores table for Country  
+  Country = IF([Country Code]="GB","United Kingdom",IF([Country Code]="US","United States",IF([Country Code]="DE","Germany","N/A")))
+- Added a full Geography column combining Region and Country:
+  Geography = Stores[Country Region] & ", " & Stores[Country]
+- Ensured the correct data category was assigned for Region (Continent), Country (Country), and Country Region (State or Province)
+- Added a Geography Hierarchy with: Region, Country and Country Region
+
