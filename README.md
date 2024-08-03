@@ -42,7 +42,7 @@ In addition to importing the data a number of transformations were required:
 
 ## Milestone 3: Creating the Data Model
 
-### Task 1: Creating a date table covering the entire period of time in the dataset
+### Task 1: Created a date table covering the entire period of time in the dataset
 
 DAX formulae were then used to add the following columns: 
 - Day of Week
@@ -54,3 +54,15 @@ DAX formulae were then used to add the following columns:
 - Start of Quarter
 - Start of Month
 - Start of Week
+
+### Task 2: Built a star schema data model
+
+Added relationships:
+Products[product_code] to Orders[product_code]
+Stores[store code] to Orders[Store Code]
+Customers[User UUID] to Orders[User ID]
+Date[date] to Orders[Order Date]
+Date[date] to Orders[Shipping Date]
+
+The relationship between Orders[Order Date] and Date[date] is the active relationship. All  relationships are one-to-many, with a single filter direction flowing from the dimension table side to the fact table side.
+
