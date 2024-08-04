@@ -80,7 +80,7 @@ This includes the following measures and DAX formulae:
 - Profit YTD          Profit YTD = TOTALYTD('Measures Table'[Total Profit], Orders[Order Date])
 - Revenue YTD         Revenue YTD = TOTALYTD(SUM(Orders[Total Revenue]), Orders[Order Date])
 
-### Task 5: Created Date and Geography Hierarchies
+### Task 5: Created Date and Geography Hierarchies:
 
 - Created a Date Hierarchy with: Start of Year, Start of Quarter, Start of Month, Start of Week, Date
 - Created a calculated column in Stores table for Country  
