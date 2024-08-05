@@ -80,7 +80,7 @@ This includes the following measures and DAX formulae:
 - Profit YTD          Profit YTD = TOTALYTD('Measures Table'[Total Profit], Orders[Order Date])
 - Revenue YTD         Revenue YTD = TOTALYTD(SUM(Orders[Total Revenue]), Orders[Order Date])
 
-### Task 5: Created Date and Geography Hierarchies
+### Task 5: Created Date and Geography Hierarchies:
 
 - Created a Date Hierarchy with: Start of Year, Start of Quarter, Start of Month, Start of Week, Date
 - Created a calculated column in Stores table for Country  
@@ -89,4 +89,25 @@ This includes the following measures and DAX formulae:
   Geography = Stores[Country Region] & ", " & Stores[Country]
 - Ensured the correct data category was assigned for Region (Continent), Country (Country), and Country Region (State or Province)
 - Added a Geography Hierarchy with: Region, Country and Country Region
+
+## Milestone 4: Setting up the Report
+
+Core report structure created, with the following pages:
+- Executive Summary
+- Customer Detail
+- Product Detail
+- Stores Map
+
+## Milestone 5: Building Customer Detail Page
+
+- Added Card Visuals to show the total number of unique customers and the average revenue per customer
+- Added a donut chart showing the split of customers per country
+- Added a bar chart showing the customer split by product category
+- Added a line chart showing total customers by date, with the user option to drill down to month level. Incorporated a trend line and forecast for the next 10 periods, using a 95% confidence interval
+- Added a table to show the top 20 customers (name, revenue and total number of orders), incorporating a bar chart for total revenue
+- Added top customer cards, showing the name of the top customer, their total number of orders and total revenue
+- Added a between slicer allowing user to select which years to filter the page
+
+### Finished Customer Detail Page:
+<img width="871" alt="image" src="https://github.com/user-attachments/assets/0e659168-e18d-4cb5-a7e2-e8e95af57241">
 
