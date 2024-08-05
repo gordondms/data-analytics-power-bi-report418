@@ -109,3 +109,5 @@ Core report structure created, with the following pages:
 - Added a between slicer allowing user to select which years to filter the page
 
 ### Finished Customer Detail Page:
+<img width="871" alt="image" src="https://github.com/user-attachments/assets/0e659168-e18d-4cb5-a7e2-e8e95af57241">
+
