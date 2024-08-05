@@ -90,3 +90,22 @@ This includes the following measures and DAX formulae:
 - Ensured the correct data category was assigned for Region (Continent), Country (Country), and Country Region (State or Province)
 - Added a Geography Hierarchy with: Region, Country and Country Region
 
+## Milestone 4: Setting up the Report
+
+Core report structure created, with the following pages:
+- Executive Summary
+- Customer Detail
+- Product Detail
+- Stores Map
+
+## Milestone 5: Building Customer Detail Page
+
+- Added Card Visuals to show the total number of unique customers and the average revenue per customer
+- Added a donut chart showing the split of customers per country
+- Added a bar chart showing the customer split by product category
+- Added a line chart showing total customers by date, with the user option to drill down to month level. Incorporated a trend line and forecast for the next 10 periods, using a 95% confidence interval
+- Added a table to show the top 20 customers (name, revenue and total number of orders), incorporating a bar chart for total revenue
+- Added top customer cards, showing the name of the top customer, their total number of orders and total revenue
+- Added a between slicer allowing user to select which years to filter the page
+
+### Finished Customer Detail Page:
