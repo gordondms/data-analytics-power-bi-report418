@@ -111,16 +111,16 @@ Core report structure created, with the following pages:
 ### Finished Customer Detail Page:
 <img width="871" alt="image" src="https://github.com/user-attachments/assets/0e659168-e18d-4cb5-a7e2-e8e95af57241">
 
-## Milestone 5: Building Executive Summary Page
+## Milestone 6: Building Executive Summary Page
 
 - Added card visuals showing Total Revenue, Total Orders and Total Profit (formatted to two decimal places), using the related Measures
 - Added a Revenue Trend Line chart, with drill down capability from Year to Quarter to Month
 - Added two donut charts showing Total Revenue, broken down by Store[Country] and Store[Store Type]
 - Added a clustered bar chart showing Total Orders filtered by Products[Category]
 - Added KPI visuals.  This required the creation of new measures:
-- - Previous Quarter Profit    Previous Quarter Profit = CALCULATE('Measures Table'[Total Profit], PREVIOUSQUARTER('Date'[Date]))
-  - Previous Quarter Revenue   Previous Quarter Revenue = CALCULATE('Measures Table'[Total Revenue], PREVIOUSQUARTER('Date'[Date]))
-  - Previous Quarter Orders    Previous Quarter Orders = CALCULATE('Measures Table'[Total Orders], PREVIOUSQUARTER('Date'[Date]))
+- - Previous Quarter Profit    Previous Quarter Profit = CALCULATE('Measures Table'[Total Profit], DATEADD('Date'[Date], -1, QUARTER))
+  - Previous Quarter Revenue   Previous Quarter Revenue = CALCULATE('Measures Table'[Total Revenue], DATEADD('Date'[Date], -1, QUARTER))
+  - Previous Quarter Orders    Previous Quarter Orders = CALCULATE('Measures Table'[Total Orders], DATEADD('Date'[Date], -1, QUARTER))
   Target measures are based on a 5% uplift on the previous quarter:
   - Target Qtly Profit         Target Qtly Profit = 'Measures Table'[Previous Quarter Profit] * 1.05 
   - Target Qtly Revenue        Target Qtly Revenue = 'Measures Table'[Previous Quarter Revenue] * 1.05 
@@ -128,3 +128,32 @@ Core report structure created, with the following pages:
 
 ### Finished Executive Summary Page:
 <img width="763" alt="image" src="https://github.com/user-attachments/assets/7bd0c586-2059-4c14-bbd8-7e6577856158">
+
+## Milestone 7: Building Product Detail Page
+
+- Added Gauge visuals for Orders, Revenue & Product
+  - Defined new measures for the quarterly targets for each metric based on a CEO defined 10% target q-on-q growth
+    - Target QTR Orders = 'Measures Table'[Previous Quarter Orders] * 1.1
+    - Target QTR Revenue = 'Measures Table'[Previous Quarter Revenue] * 1.1
+    - Target QTR Profit = 'Measures Table'[Previous Quarter Profit] * 1.1
+  - Maximum value is set to these target measures
+  - Value is set to use the previously defined QTD Orders / Revenue / Profit measures:
+    - QTD Orders = TOTALQTD([Total Orders], 'Date'[Date])
+    - QTD Revenue = TOTALQTD([Total Revenue], 'Date'[Date])
+    - QTD Profit = TOTALQTD([Total Profit], 'Date'[Date])
+  - Callout value is conditionally formatted to be red if the target is not yet met
+- Added Filter State cards to show the filter state for Product Category and Country using the following measures
+  - Category Selection = IF(ISFILTERED(Products[Category]), SELECTEDVALUE(Products[Category], "No Selection"), "No Selection")
+  - Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country],"No Selection")
+- Added an area chart showing how the different product categories are performing in terms of revenue over time:
+  - X axis = Dates[Start of Quarter]
+  - Y axis = Total Revenue
+  - Legend = Products[Category]
+- Added a Top 10 products table showing
+    - Product Description
+    - Total Revenue
+    - Total Customers
+    - Total Orders
+    - Profit Per Order
+- Added a Scatter Graph showing Quantity Sold vs Profit per Item
+- Created a Slicer Toolbar
