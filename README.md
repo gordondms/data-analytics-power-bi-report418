@@ -145,4 +145,15 @@ Core report structure created, with the following pages:
 - Added Filter State cards to show the filter state for Product Category and Country using the following measures
   - Category Selection = IF(ISFILTERED(Products[Category]), SELECTEDVALUE(Products[Category], "No Selection"), "No Selection")
   - Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country],"No Selection")
-- X
+- Added an area chart showing how the different product categories are performing in terms of revenue over time:
+  - X axis = Dates[Start of Quarter]
+  - Y axis = Total Revenue
+  - Legend = Products[Category]
+- Added a Top 10 products table showing
+    - Product Description
+    - Total Revenue
+    - Total Customers
+    - Total Orders
+    - Profit Per Order
+- Added a Scatter Graph showing Quantity Sold vs Profit per Item
+- Created a Slicer Toolbar
