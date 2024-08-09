@@ -132,4 +132,4 @@ Core report structure created, with the following pages:
 ## Milestone 7: Building Product Detail Page
 
 - Added Gauge visuals for Orders, Revenue & Product
--- Defined
+  - Defined
