@@ -132,4 +132,17 @@ Core report structure created, with the following pages:
 ## Milestone 7: Building Product Detail Page
 
 - Added Gauge visuals for Orders, Revenue & Product
-  - Defined
+  - Defined new measures for the quarterly targets for each metric based on a CEO defined 10% target q-on-q growth
+    - Target QTR Orders = 'Measures Table'[Previous Quarter Orders] * 1.1
+    - Target QTR Revenue = 'Measures Table'[Previous Quarter Revenue] * 1.1
+    - Target QTR Profit = 'Measures Table'[Previous Quarter Profit] * 1.1
+  - Maximum value is set to these target measures
+  - Value is set to use the previously defined QTD Orders / Revenue / Profit measures:
+    - QTD Orders = TOTALQTD([Total Orders], 'Date'[Date])
+    - QTD Revenue = TOTALQTD([Total Revenue], 'Date'[Date])
+    - QTD Profit = TOTALQTD([Total Profit], 'Date'[Date])
+  - Callout value is conditionally formatted to be red if the target is not yet met
+- Added Filter State cards to show the filter state for Product Category and Country using the following measures
+  - Category Selection = IF(ISFILTERED(Products[Category]), SELECTEDVALUE(Products[Category], "No Selection"), "No Selection")
+  - Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country],"No Selection")
+- X
