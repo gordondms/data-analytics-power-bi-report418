@@ -173,7 +173,26 @@ Core report structure created, with the following pages:
   <img width="106" alt="image" src="https://github.com/user-attachments/assets/9fae8ec8-9d0e-411e-b1dc-495201794b16">
 
 Final Product Detail Page:
+
 <img width="452" alt="image" src="https://github.com/user-attachments/assets/b5c61794-e8c4-4b74-83da-f578f2438a05">
+
+## Milestone 8: Building Stores Map Page
+
+- Added a Stores Map pagem based on the defined Geography hierarchy and bubble size = ProfitYTD
+- Added a Country Slicer above the map to allow country selection (or Select All)
+- Added a Stores Drillthrough page, including:
+  - Table showing top 5 products with Description, Profit YTD, Total Orders, Total Revenue
+  - A column chart showing Total Orders by product category for the store
+  - Gauges for Profit YTD and Revenue YTD, with a Profit/Revenue Goal based on a 20% increase on the previous year's y-t-d profit/revenue, these were based on the following Measures:
+    - Revenue Goal = CALCULATE('Measures Table'[Revenue YTD], SAMEPERIODLASTYEAR('Date'[Date])) * 1.2
+    - Profit Goal = CALCULATE('Measures Table'[Profit YTD], SAMEPERIODLASTYEAR('Date'[Date])) * 1.2
+- Added a Stores Tooltip page
+
+Stores Map page:
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/6cf1d8ce-8657-4403-b0a7-acd3be61646a">
+
+Stores Drillthrough page:
+<img width="480" alt="image" src="https://github.com/user-attachments/assets/4d62d7b4-8237-46ff-8cde-d1b7737f6450">
 
 
 
