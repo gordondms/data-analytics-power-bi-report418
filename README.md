@@ -189,10 +189,31 @@ Final Product Detail Page:
 - Added a Stores Tooltip page
 
 Stores Map page:
+
 <img width="476" alt="image" src="https://github.com/user-attachments/assets/6cf1d8ce-8657-4403-b0a7-acd3be61646a">
 
 Stores Drillthrough page:
+
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/4d62d7b4-8237-46ff-8cde-d1b7737f6450">
 
+
+## Milestone 9: Cross Filtering & Navigation
+
+- Cross Filtering
+  - Executive Summary:
+    - Product Category bar chart and Top 10 Products table are set to not filter the card visuals or KPIs
+  - Customer Detail:
+    - Top 20 Customers table does not filter any other visuals
+    - Total Customers by Product chart does not filter the Customer line chart
+    - Total Customers by Country donut chart does filter the Product bar chart
+  - Product Detail Page
+    - Orders/Profitability Scatter Chart does not filter any other visuals
+    - Top 10 Products table does not filter any other visuals
+- Navigation Bar
+  - Icons added to navigation bar to enable navigation between pages
+  - Icons set to change colour on hover over
+Final Navigation Bar:
+
+<img width="34" alt="image" src="https://github.com/user-attachments/assets/a3ef088d-328b-452a-bfd7-f943c58bc5a3">
 
 
