@@ -156,4 +156,24 @@ Core report structure created, with the following pages:
     - Total Orders
     - Profit Per Order
 - Added a Scatter Graph showing Quantity Sold vs Profit per Item
-- Created a Slicer Toolbar
+    - Created a new calculated column in Products table called 'Profit per Item':
+      Profit per Item = Products[Sale Price] - Products[Cost Price]
+      Scatter chart is configured as:
+      Values = Products[Description]
+      X-Axis = Products[Profit per Item]
+      Y-Axis = Orders[Total Quantity]
+      Legend = Products[Category]
+- Added a slicer toolbar. This required:
+    - Filter icon added to top of navigation bar to open slicer toolbar
+    - Addition of two slicers for Product Category and Stores Country
+    - Addition of a back button on the slicer toolbar
+    - Creation of bookmarks to show the slicer Open and slicer Closed states
+    - Assignment of actions to the buttons using the bookmarks
+  Slicer Toolbar:
+  <img width="106" alt="image" src="https://github.com/user-attachments/assets/9fae8ec8-9d0e-411e-b1dc-495201794b16">
+
+Final Product Detail Page:
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/b5c61794-e8c4-4b74-83da-f578f2438a05">
+
+
+
