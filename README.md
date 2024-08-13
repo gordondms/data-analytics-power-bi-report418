@@ -216,7 +216,7 @@ Final Navigation Bar:
 
 <img width="34" alt="image" src="https://github.com/user-attachments/assets/a3ef088d-328b-452a-bfd7-f943c58bc5a3">
 
-## Milestone 10: Cross Filtering & Navigation
+## Milestone 10: Querying the Database
 
 Note that I have been unable to fully complete this Milestone at this time, due to technical issues with the test database that the AiCore Curriculum team is working on.
 
