@@ -1,0 +1,6 @@
+"column_name","data_type"
+"sale_price","double precision"
+"product_quantity","bigint"
+"cost_price","double precision"
+"dates","text"
+"country","text"

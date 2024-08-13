@@ -1,0 +1,4 @@
+"column_name","data_type"
+"total_sales_new","double precision"
+"order_date_uuid","text"
+"store_type","text"
