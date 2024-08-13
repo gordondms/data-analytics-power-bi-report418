@@ -216,4 +216,12 @@ Final Navigation Bar:
 
 <img width="34" alt="image" src="https://github.com/user-attachments/assets/a3ef088d-328b-452a-bfd7-f943c58bc5a3">
 
+## Milestone 10: Cross Filtering & Navigation
 
+Note that I have been unable to fully complete this Milestone at this time, due to technical issues with the test database that the AiCore Curriculum team is working on.
+
+- Connected to a Postgres database hosted on Microsoft Azure using the SQLTools extension in VSCode
+- Checked the table and column names, saving lists of tables and columns as CSV files for reference
+- Started to run SQL queries on the tables to answer specific business questions (unable to complete this due to technical database issues)
+
+ 
